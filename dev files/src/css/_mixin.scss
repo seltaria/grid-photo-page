@@ -1,0 +1,75 @@
+@mixin no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin add-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin btn {
+  display: inline-block;
+  padding: 15px 22px;
+  background-color: $color-orange;
+  color: white;
+  border: 2px solid $color-orange;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  transition-property: background-color, border-color;
+  transition-duration: $duration;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin btn-full {
+  &:hover {
+    background-color: $color-orange-dark;
+    border-color: $color-orange-dark;
+  }
+
+  &:focus {
+    background-color: $color-orange;
+    border-color: $color-orange-red;
+  }
+
+  &:active {
+    background-color: $color-orange-red;
+    border-color: $color-orange-red;
+  }
+}
+
+@mixin btn-empty {
+  &:hover {
+    background-color: $color-orange;
+    border-color: $color-orange;
+  }
+
+  &:focus {
+    background-color: $color-orange-dark;
+    border-color: $color-orange;
+  }
+
+  &:active {
+    background-color: $color-orange-red;
+    border-color: $color-orange-red;
+  }
+}
+
+@mixin h2-title {
+  font-family: 'Neue';
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+@mixin hashtag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 7px 15px;
+  background-color: $color-black;
+  color: white;
+  font-size: 14px;
+}
